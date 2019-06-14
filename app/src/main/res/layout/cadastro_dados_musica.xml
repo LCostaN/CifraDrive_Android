@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/small_space"
+    tools:context=".CadastroDadosMusicaActivity">
+
+    <TextView
+        android:id="@+id/tv_novaMusicaTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/normal_space"
+        android:text="@string/novaCifra"
+        android:textAlignment="center"
+        android:textSize="@dimen/title" />
+
+    <AutoCompleteTextView
+        android:id="@+id/actv_nomeNovaMusica"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_novaMusicaTitulo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/huge_space"
+        android:layout_marginBottom="@dimen/big_space"
+        android:autofillHints="music"
+        android:completionThreshold="3"
+        android:hint="@string/nomeMusica"
+        android:inputType="textAutoComplete|text"
+        android:textSize="@dimen/normal_text"
+        tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/et_versaoNovaMusica"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/actv_nomeNovaMusica"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/big_space"
+        android:hint="@string/nomeVersao"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textSize="@dimen/normal_text"
+        tools:targetApi="o" />
+
+    <Spinner
+        android:id="@+id/sp_tomOriginal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_versaoNovaMusica"
+        android:layout_marginEnd="@dimen/small_space"
+        android:layout_marginRight="@dimen/small_space"
+        android:layout_marginBottom="@dimen/big_space" />
+
+    <EditText
+        android:id="@+id/et_tagsNovaMusica"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sp_tomOriginal"
+        android:layout_marginBottom="@dimen/huge_space"
+        android:autofillHints="tags"
+        android:hint="@string/tags"
+        android:inputType="text|textMultiLine"
+        android:maxLines="3"
+        android:textSize="@dimen/normal_text"
+        tools:targetApi="o" />
+
+    <ProgressBar
+        android:id="@+id/pb_loadingNovaCifra"
+        android:layout_width="@dimen/add_button_size"
+        android:layout_height="@dimen/add_button_size"
+        android:layout_alignTop="@id/btn_arquivoNovaMusica"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_arquivoNovaMusica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_tagsNovaMusica"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:padding="@dimen/normal_space"
+        android:text="@string/continuar"
+        android:textColor="@android:color/background_light"
+        android:textSize="@dimen/normal_text"
+        app:backgroundTint="@color/info" />
+
+</RelativeLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/small_space"
+    android:layout_margin="@dimen/minor_space"
+    android:background="@drawable/list_item_bg">
+
+    <TextView
+        android:id="@+id/list_item_nome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/normal_text"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/list_item_extra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:gravity="fill_horizontal"
+        android:textSize="@dimen/small_text"/>
+
+</LinearLayout>

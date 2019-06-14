@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
+        android:descendantFocusability="beforeDescendants"
+        android:padding="@dimen/small_space">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/civ_loginIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="300dp"
+            android:maxHeight="300dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/small_space"
+            android:src="@mipmap/cifra_drive_icon" />
+
+
+        <EditText
+            android:id="@+id/et_emailLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/civ_loginIcon"
+            android:textSize="@dimen/normal_text"
+            android:hint="@string/email"
+            android:maxLength="50"
+            android:inputType="textEmailAddress"
+            android:autofillHints="emailAddress"
+            tools:targetApi="O"/>
+
+        <EditText
+            android:id="@+id/et_senhaLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_emailLogin"
+            android:layout_marginTop="@dimen/small_space"
+            android:textSize="@dimen/normal_text"
+            android:hint="@string/senha"
+            android:inputType="textPassword"
+            android:maxLength="24"
+            android:autofillHints="password"
+            tools:targetApi="o" />
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/cb_mostrarSenhaLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_senhaLogin"
+            android:text="@string/mostrarSenha" />
+
+        <ProgressBar
+            android:id="@+id/pb_loadingLogin"
+            android:layout_height="@dimen/add_button_size"
+            android:layout_width="@dimen/add_button_size"
+            android:layout_alignTop="@id/btn_login"
+            android:layout_centerHorizontal="true"
+            android:visibility="invisible" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cb_mostrarSenhaLogin"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/huge_space"
+            android:padding="@dimen/normal_space"
+            android:text="@string/entrar"
+            android:textSize="@dimen/normal_text"
+            app:backgroundTint="@color/success"
+            android:textColor="@android:color/background_light" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_novoUsuario"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_login"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/small_space"
+            android:text="@string/cadastrar_se"
+            android:textSize="@dimen/normal_text" />
+
+
+    </RelativeLayout>
+</ScrollView>

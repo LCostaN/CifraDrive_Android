@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_like"
+        android:icon="@drawable/ic_thumb_up_black_24dp"
+        android:title="@string/like"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="1"/>
+
+    <item
+        android:id="@+id/menu_hate"
+        android:icon="@drawable/ic_thumb_down_black_24dp"
+        android:title="@string/hate"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="2"/>
+
+    <item
+        android:id="@+id/menu_editar_cifra"
+        android:icon="@drawable/ic_edit_black_24dp"
+        android:title="@string/editar"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="5"/>
+</menu>

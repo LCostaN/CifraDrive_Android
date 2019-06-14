@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity"
+    android:paddingBottom="@dimen/small_space" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/ll_menuMainButtonBar"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/label_versiculo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/versiculo_dia"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_margin="@dimen/normal_space"
+                android:textSize="@dimen/normal_text" />
+
+            <TextView
+                android:id="@+id/tv_versiculoDiario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/versiculoDia"
+                android:textAlignment="center"
+                android:textSize="@dimen/small_title"
+                android:layout_below="@id/label_versiculo"
+                android:layout_margin="@dimen/small_space"/>
+
+            <TextView
+                android:id="@+id/label_recomendacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/recomendacao_dia"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_margin="@dimen/normal_space"
+                android:layout_below="@id/tv_versiculoDiario"
+                android:textSize="@dimen/normal_text" />
+
+            <TextView
+                android:id="@+id/tv_recomendacaoDia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/label_recomendacao"
+                android:text="@string/musicaDia"
+                android:textAlignment="center"
+                android:textSize="@dimen/small_title"
+                android:layout_margin="@dimen/normal_space" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        style="?android:attr/buttonBarStyle"
+        android:id="@+id/ll_menuMainButtonBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:isScrollContainer="true" >
+
+        <ImageButton
+            style="?android:attr/buttonBarButtonStyle"
+            android:id="@+id/btn_profile"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_bar_height"
+            android:layout_weight="1"
+            android:src="@mipmap/no_image_profile"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/perfil"/>
+
+        <ImageButton
+            style="?android:attr/buttonBarButtonStyle"
+            android:id="@+id/btn_grupos"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_bar_height"
+            android:layout_weight="1"
+            android:src="@mipmap/group"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/grupos"/>
+
+        <ImageButton
+            style="?android:attr/buttonBarButtonStyle"
+            android:id="@+id/btn_cifras"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_bar_height"
+            android:layout_weight="1"
+            android:src="@mipmap/music"
+            android:scaleType="centerInside"
+            android:contentDescription="@string/cifras"/>
+
+    </LinearLayout>
+</RelativeLayout>

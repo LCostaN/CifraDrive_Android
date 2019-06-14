@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CadastroGrupoActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/small_space">
+
+        <TextView
+            android:id="@+id/tv_novoGrupoTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/big_space"
+            android:text="@string/novoGrupo"
+            android:textAlignment="center"
+            android:textSize="@dimen/title"/>
+
+        <EditText
+            android:id="@+id/et_nomeNovoGrupo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_novoGrupoTitulo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/huge_space"
+            android:layout_marginBottom="@dimen/big_space"
+            android:hint="@string/nomeGrupo"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:textSize="@dimen/normal_text"
+            tools:targetApi="o" />
+
+        <EditText
+            android:id="@+id/et_descricaoNovoGrupo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_nomeNovoGrupo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/big_space"
+            android:hint="@string/descricao"
+            android:importantForAutofill="no"
+            android:inputType="text|textMultiLine"
+            android:lines="4"
+            android:textSize="@dimen/normal_text"
+            tools:targetApi="o" />
+
+        <EditText
+            android:id="@+id/et_websiteNovoGrupo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_descricaoNovoGrupo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/big_space"
+            android:autofillHints="url"
+            android:hint="@string/website"
+            android:inputType="textUri"
+            android:textSize="@dimen/normal_text"
+            tools:targetApi="o"/>
+
+        <EditText
+            android:id="@+id/et_tagsNovoGrupo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_websiteNovoGrupo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/big_space"
+            android:hint="@string/tagsInteresses"
+            android:autofillHints="tags"
+            android:inputType="text|textMultiLine"
+            android:maxLines="3"
+            android:textSize="@dimen/normal_text"
+            tools:targetApi="o"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_selecionarFotoNovoGrupo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_tagsNovoGrupo"
+            android:layout_marginBottom="@dimen/big_space"
+            android:hint="@string/alterarImagem"
+            android:textSize="@dimen/normal_text" />
+
+        <ProgressBar
+            android:id="@+id/pb_loadingNovoGrupo"
+            android:layout_height="@dimen/add_button_size"
+            android:layout_width="@dimen/add_button_size"
+            android:layout_alignTop="@id/btn_cadastrarNovoGrupo"
+            android:layout_centerHorizontal="true"
+            android:visibility="invisible" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_cadastrarNovoGrupo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_selecionarFotoNovoGrupo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/huge_space"
+            android:padding="@dimen/normal_space"
+            android:text="@string/cadastrar"
+            android:textColor="@android:color/background_light"
+            android:textSize="@dimen/normal_text"
+            app:backgroundTint="@color/success"/>
+
+    </RelativeLayout>
+</ScrollView>

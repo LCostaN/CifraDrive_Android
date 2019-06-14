@@ -1,0 +1,118 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Cifra Drive</string>
+    <string name="preferences_file">cifradrive.fatec.br.preferences</string>
+    <string name="hashKey">userHash</string>
+
+    <string name="versiculo_dia">Versiculo do dia:</string>
+    <string name="recomendacao_dia">Recomendação do dia:</string>
+
+    <string name="sair">Sair</string>
+    <string name="login">Login</string>
+    <string name="novoGrupo">Novo Grupo</string>
+    <string name="novoUsuario">Novo Usuario</string>
+    <string name="novaCifra">Nova Cifra</string>
+    <string name="listaMusicas">Lista Músicas</string>
+    <string name="listaVersoes">Lista Versões</string>
+    <string name="listaGrupos">Lista Grupos</string>
+    <string name="perfil">Perfil</string>
+    <string name="options">Opções</string>
+    <string name="help">Ajuda</string>
+
+
+    <string name="email">E-mail</string>
+    <string name="senha">Senha</string>
+    <string name="senhaConfirm">Confirmar Senha</string>
+    <string name="entrar">Entrar</string>
+
+    <string name="like">Like</string>
+    <string name="hate">Hate</string>
+    <string name="download">Download</string>
+
+    <string name="nome">Nome</string>
+    <string name="dataNascimento">Data de nascimento no modelo dia / mes / ano.</string>
+    <string name="modeloData">dd/mm/aaaa</string>
+    <string name="sexo">Sexo</string>
+    <string name="mostrarSenha">Mostrar Senha</string>
+
+    <string name="nomeGrupo">Nome do Grupo</string>
+    <string name="descricao">Descrição</string>
+    <string name="website">Website</string>
+    <string name="tagsInteresses">Interesses (#Tags)</string>
+
+    <string name="nomeMusica">Nome da Música</string>
+    <string name="nomeVersao" tools:ignore="Typos">Versão ( Autor, Album, etc)</string>
+    <string name="selecionarArquivo">Selecionar arquivo</string>
+    <string name="tags">#Tags</string>
+
+    <string name="alterarImagem">Alterar Imagem</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="cadastrar_se">Cadastrar-se</string>
+
+    <string name="grupos">Grupos</string>
+    <string name="cifras">Cifras</string>
+
+    <string name="meusGrupos">Meus Grupos</string>
+    <string name="buscarGrupos">Buscar Grupos</string>
+
+    <!-- Ações -->
+    <string name="editar">Editar</string>
+    <string name="goToLogin">Login</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="salvar">Salvar</string>
+    <string name="continuar">Continuar</string>
+
+    <!-- Search Fields -->
+    <string name="procurarMusica">Procurar Música</string>
+    <string name="procurarGrupo">Procurar Grupo</string>
+
+    <!-- Home Info -->
+    <string name="versiculoDia">\"O Senhor é meu pastor e nada me faltará. \nSalmos 23:1\"</string>
+    <string name="musicaDia">Tu és Santo - (Vineyard)</string>
+
+    <!-- Messages -->
+    <string name="errorLoginMessage">Email e Senha não correspondem a nenhum usuário existente.</string>
+    <string name="errorDuplicateMessage">Usuário já existe! Escolha outro email.</string>
+    <string name="errorConfirmMessage">Senha e Confirmar Senha não são iguais.</string>
+    <string name="errorMessage">Não foi possível completar a ação!</string>
+    <string name="successMessage">Ação realizada com sucesso!</string>
+    <string name="no_results">Nenhum resultado encontrado</string>
+    <string name="requiredMessage">Campos obrigatórios não preenchidos!</string>
+
+    <string name="loginAskMessage">Deseja entrar agora?</string>
+    <string name="notConnectedMessage">Não há conexão com a Internet</string>
+
+    <string name="loginDialogTitle">É necessário logar para continuar!</string>
+
+    <!-- String Arrays -->
+    <string-array name="sexos">
+        <item>-Selecionar-</item>
+        <item>Masculino</item>
+        <item>Feminino</item>
+    </string-array>
+
+    <string-array name="tons">
+        <item>C</item>
+        <item>C#</item>
+        <item>D</item>
+        <item>D#</item>
+        <item>E</item>
+        <item>F</item>
+        <item>F#</item>
+        <item>G</item>
+        <item>G#</item>
+        <item>A</item>
+        <item>A#</item>
+        <item>B</item>
+    </string-array>
+
+
+    <!-- PREFERENCES MESSAGES -->
+    <string name="pref_armazenamento">Salvar em cartão SD</string>
+    <string name="pref_armazenamento_warn">Espaço interno será usado se necessário.</string>
+    <string name="pref_mobile_download">Download em dados móveis</string>
+    <string name="pref_mobile_download_warn"><font fgcolor='#FFFF0000'><b>ATENÇÃO:</b> Cobranças do serviço de rede podem ser aplicadas!</font></string>
+
+
+    <string name="confirmMessage">Você tem certeza que deseja continuar?</string>
+
+</resources>

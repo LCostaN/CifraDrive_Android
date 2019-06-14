@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/small_space"
+    tools:context=".ListaMusicaActivity">
+
+    <TextView
+        android:id="@+id/tv_musica"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/title"
+        android:textStyle="bold"
+        android:layout_marginBottom="@dimen/normal_space" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_versionList"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_musica"/>
+
+
+    <ImageButton
+        style="?android:attr/borderlessButtonStyle"
+        android:id="@+id/ib_addMusic"
+        android:layout_width="@dimen/add_button_size"
+        android:layout_height="@dimen/add_button_size"
+        android:layout_margin="@dimen/normal_space"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_add_circle_green_60dp"
+        android:contentDescription="@string/novaCifra" />
+
+</RelativeLayout>

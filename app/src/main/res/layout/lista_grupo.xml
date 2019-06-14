@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/small_space"
+    android:focusableInTouchMode="true"
+    android:descendantFocusability="beforeDescendants"
+    tools:context=".ListaMusicaActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_grupo_search_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_procurarGrupo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:hint="@string/procurarGrupo"
+            android:textSize="@dimen/normal_text"
+            android:layout_marginBottom="@dimen/normal_space"
+            android:inputType="text"
+            android:imeOptions="actionSearch"
+            android:importantForAutofill="no"
+            tools:targetApi="o" />
+
+        <RadioGroup
+            android:id="@+id/rg_grupos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
+
+            <RadioButton
+                android:id="@+id/rb_meusGrupos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/meusGrupos"
+                android:textSize="@dimen/normal_text"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/rb_buscarGrupos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/buscarGrupos"
+                android:textSize="@dimen/normal_text" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_nenhumGrupo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/rv_groupList"
+        android:text="@string/no_results"
+        android:textSize="@dimen/normal_text"
+        android:gravity="center"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_groupList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_grupo_search_line"
+        android:layout_marginTop="@dimen/normal_space"
+        android:scrollbars="vertical" />
+
+
+    <ImageButton
+        android:id="@+id/ib_addGrupo"
+        android:layout_width="@dimen/add_button_size"
+        android:layout_height="@dimen/add_button_size"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/normal_space"
+        android:contentDescription="@string/novoGrupo"
+        android:src="@drawable/ic_group_add_green_60dp"
+        android:background="@drawable/round_button"/>
+
+</RelativeLayout>

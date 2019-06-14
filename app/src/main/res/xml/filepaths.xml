@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <files-path path="usuarios/" name="usuarios" />
+    <files-path name="grupos" path="grupos/"/>
+    <files-path name="cifras" path="cifras/"/>
+
+    <external-files-path name="usuarios" path="usuarios/"/>
+    <external-files-path name="grupos" path="grupos/"/>
+    <external-files-path name="cifras" path="cifras/"/>
+</paths>

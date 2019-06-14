@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/small_space"
+    android:focusableInTouchMode="true"
+    android:descendantFocusability="beforeDescendants"
+    tools:context=".ListaMusicaActivity">
+
+    <EditText
+        android:id="@+id/et_procurarMusica"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/procurarMusica"
+        android:textSize="@dimen/normal_text"
+        android:layout_marginBottom="@dimen/normal_space"
+        android:inputType="text"
+        android:imeOptions="actionSearch"
+        android:importantForAutofill="no"
+        tools:targetApi="o"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_musicList"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/et_procurarMusica"
+        android:layout_marginTop="@dimen/small_space" />
+
+
+    <ImageButton
+        style="?android:attr/borderlessButtonStyle"
+        android:id="@+id/ib_addMusic"
+        android:layout_width="@dimen/add_button_size"
+        android:layout_height="@dimen/add_button_size"
+        android:layout_margin="@dimen/normal_space"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_add_circle_green_60dp"
+        android:contentDescription="@string/novaCifra" />
+
+</RelativeLayout>

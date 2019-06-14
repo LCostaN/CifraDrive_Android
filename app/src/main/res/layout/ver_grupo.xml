@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/normal_space">
+
+        <ImageView
+            android:id="@+id/iv_fotoGrupo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/normal_space"
+            android:maxHeight="360dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/group"
+            tools:ignore="ContentDescription" />
+
+        <EditText
+            android:id="@+id/et_nomeGrupo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/big_space"
+
+            android:hint="@string/nomeGrupo"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:textSize="@dimen/normal_text"
+            tools:targetApi="o" />
+
+        <EditText
+            android:id="@+id/et_descricaoGrupo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/big_space"
+
+            android:hint="@string/descricao"
+            android:importantForAutofill="no"
+            android:inputType="text|textMultiLine"
+            android:maxLines="3"
+            android:textSize="@dimen/normal_text"
+            tools:targetApi="o" />
+
+        <EditText
+            android:id="@+id/et_websiteGrupo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/big_space"
+            android:autofillHints="url"
+
+            android:hint="@string/website"
+            android:inputType="textUri"
+            android:textSize="@dimen/normal_text"
+            tools:targetApi="o" />
+
+        <EditText
+            android:id="@+id/et_tagsGrupo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/big_space"
+            android:autofillHints="tags"
+
+            android:hint="@string/tagsInteresses"
+            android:inputType="text|textMultiLine"
+            android:maxLines="3"
+            android:textSize="@dimen/normal_text"
+            tools:targetApi="o" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_alterarFotoGrupo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/big_space"
+            android:hint="@string/alterarImagem"
+            android:textSize="@dimen/normal_text"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_cancelarEditarGrupo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:hint="@string/cancelar"
+                android:textColor="@android:color/background_light"
+                android:textSize="@dimen/normal_text"
+                android:visibility="gone"
+                app:backgroundTint="@color/error"/>
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_confirmarEditarGrupo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:hint="@string/salvar"
+                android:textColor="@android:color/background_light"
+                android:textSize="@dimen/normal_text"
+                android:visibility="gone"
+                app:backgroundTint="@color/success" />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

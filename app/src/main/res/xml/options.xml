@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <SwitchPreference
+        app:key="armazenamento_externo"
+        app:summaryOn="@string/pref_armazenamento_warn"
+        app:title="@string/pref_armazenamento"
+        app:defaultValue="false"
+        app:iconSpaceReserved="false" />
+
+    <SwitchPreference
+        app:key="mobile_download"
+        app:title="@string/pref_mobile_download"
+        app:singleLineTitle="true"
+        app:defaultValue="false"
+        app:iconSpaceReserved="false" />
+
+    <Preference
+        app:icon="@drawable/ic_help_black_24dp"
+        app:key="help"
+        app:title="@string/help" >
+
+        <intent
+            android:targetPackage="cifradrive.fatec.br"
+            android:targetClass="cifradrive.fatec.br.HelpActivity" />
+    </Preference>
+
+    <Preference
+        app:icon="@drawable/ic_exit_to_app_black_24dp"
+        app:key="logout"
+        app:title="@string/sair" >
+
+        <intent
+            android:targetPackage="cifradrive.fatec.br"
+            android:targetClass="cifradrive.fatec.br.LoginActivity"/>
+    </Preference>
+
+
+</PreferenceScreen>

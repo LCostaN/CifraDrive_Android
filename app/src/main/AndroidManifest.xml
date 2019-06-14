@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cifradrive.fatec.br">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/cifra_drive_icon"
+        android:roundIcon="@mipmap/cifra_drive_icon"
+        android:supportsRtl="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:theme="@style/AppTheme">
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="cifradrive.fatec.br.fileprovider"
+            android:grantUriPermissions="true"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/login" />
+
+        <activity
+            android:name=".CadastroGrupoActivity"
+            android:label="@string/novoGrupo"></activity>
+
+        <activity
+            android:name=".CadastroUsuarioActivity"
+            android:label="@string/novoUsuario"></activity>
+
+        <activity
+            android:name=".CadastroDadosMusicaActivity"
+            android:label="@string/novaCifra"></activity>
+
+        <activity
+            android:name=".ListaMusicaActivity"
+            android:label="@string/listaMusicas"></activity>
+
+        <activity
+            android:name=".ListaVersaoActivity"
+            android:label="@string/listaVersoes"></activity>
+
+        <activity
+            android:name=".ListaGrupoActivity"
+            android:label="@string/listaGrupos"></activity>
+
+        <activity
+            android:name=".PerfilActivity"
+            android:label="@string/perfil"></activity>
+
+        <activity android:name=".VerGrupoActivity"></activity>
+
+        <activity android:name=".VerMusicaActivity"></activity>
+
+        <activity
+            android:name=".OptionsActivity"
+            android:label="@string/options"></activity>
+
+        <activity
+            android:name=".HelpActivity"
+            android:label="@string/help"
+            android:parentActivityName=".OptionsActivity"></activity>
+
+    </application>
+</manifest>
